@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média Aritmética</title>
+</head>
+<body>
+    <h1>Cálculo da Média Aritmética</h1>
+
+    <script>
+        var vetor = new Array(10);
+
+        for (var i = 0; i < 10; i++) {
+            vetor[i] = parseFloat(prompt("Digite o elemento " + (i + 1) + ":"));
+        }
+
+        var soma = 0;
+        for (var i = 0; i < 10; i++) {
+            soma += vetor[i];
+        }
+
+        var media = soma / 10;
+
+        // Exibindo o resultado na página
+        document.write("<p>A média aritmética dos elementos é: " + media + "</p>");
+    </script>
+</body>
+</html>
+
+
+

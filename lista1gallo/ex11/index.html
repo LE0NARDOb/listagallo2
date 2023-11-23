@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Venda de Ingressos</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Sistema de Venda de Ingressos</h2>
+
+    <table>
+        <tr>
+            <th>Fileira</th>
+            <th>Poltronas</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td id="A"></td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td id="B"></td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td id="C"></td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td id="D"></td>
+        </tr>
+    </table>
+
+    <p>Total de poltronas vazias: <span id="totalVazias"></span></p>
+    <p>Total de poltronas ocupadas: <span id="totalOcupadas"></span></p>
+
+    <h3>Comprar Ingresso</h3>
+    <label for="fileira">Fileira:</label>
+    <input type="text" id="fileira" maxlength="1" placeholder="A, B, C ou D">
+
+    <label for="poltrona">Número da Poltrona:</label>
+    <input type="number" id="poltrona" placeholder="1-20">
+
+    <button onclick="comprarIngresso()">Comprar</button>
+
+    <script src="main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Temperaturas</title>
+</head>
+<body>
+    <h1>Análise de Temperaturas</h1>
+
+    <script>
+        var temperaturas = new Array(24);
+
+        for (var i = 0; i < 24; i++) {
+            var temperatura = parseFloat(prompt("Digite a temperatura para o horário " + (i + 1) + ":"));
+            temperaturas[i] = temperatura;
+        }
+
+        var temperaturaMaxima = temperaturas[0];
+        var temperaturaMinima = temperaturas[0];
+        var somaTemperaturas = temperaturas[0];
+        var horarioMaxima = 1;
+        var horarioMinima = 1;
+
+        for (var i = 1; i < 24; i++) {
+            somaTemperaturas += temperaturas[i];
+
+            if (temperaturas[i] > temperaturaMaxima) {
+                temperaturaMaxima = temperaturas[i];
+                horarioMaxima = i + 1;
+            }
+
+            if (temperaturas[i] < temperaturaMinima) {
+                temperaturaMinima = temperaturas[i];
+                horarioMinima = i + 1;
+            }
+        }
+
+        var mediaTemperaturas = somaTemperaturas / 24;
+
+        // Exibindo os resultados na página
+        document.write("<p>Temperatura Máxima: " + temperaturaMaxima + "°C, Horário: " + horarioMaxima + "h</p>");
+        document.write("<p>Temperatura Mínima: " + temperaturaMinima + "°C, Horário: " + horarioMinima + "h</p>");
+        document.write("<p>Média das Temperaturas: " + mediaTemperaturas + "°C</p>");
+    </script>
+</body>
+</html>
